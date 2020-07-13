@@ -1,12 +1,17 @@
-import React from 'react';
 import './App.css';
+import React, { Component } from 'react';
+import Banner from './Components/Banner';
+import PawForm from './Components/PawForm'
 
-function App() {
-  return (
-    <div className="App">
-      <h1>PawTastic</h1>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Banner/>
+        <PawForm/>
+      </div>
+    );
+  }
 }
 
 export default App;
