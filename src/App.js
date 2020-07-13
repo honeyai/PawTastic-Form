@@ -1,14 +1,15 @@
 import './App.css';
 import React, { Component } from 'react';
 import Banner from './Components/Banner';
-import PawForm from './Components/PawForm'
+import PawContainer from './Components/PawContainer';
 
 class App extends Component {
+  
   render() {
     return (
-      <div>
+      <div className="wrapper">
         <Banner/>
-        <PawForm/>
+        <PawContainer/>
       </div>
     );
   }

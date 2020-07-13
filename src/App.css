@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+.wrapper{
+  display: grid;
+  grid-template-areas: 
+  "banner" "banner" "banner"
+  "empty"  "form"   "empty"
+  "footer" "footer" "footer"
+  ;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logoIcon{
+  border: solid;
+  width: auto;
+  height: 50%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.companyName{
+  border: springgreen solid;
+  display: inline-block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.banner{
+  border: olive solid;
+  grid-area: "banner";
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
+  width: 100vw;
+  height: 10vh;
+}
+
+.pawForm{
+  border: solid;
+  display: grid;
+  grid-template-columns: repeat(1fr 1fr);
+  width: 50vh;
+  height: 50vh;
+}
+
+.container {
+  border: forestgreen solid;
+  grid-area: "form";
+  display: grid;
+  grid-template-columns: repeat(1fr 1fr 1fr);
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
+  max-height: 75vh;
+  min-height: 75vh;
+  max-width: 75vh;
+  min-width: 75vh;
+  border-radius: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.weightGroup{
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.switch, .switchWeight{
+  z-index: 0;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 150px;
+  max-width: 150px;
+  min-height: 70px;
+  max-height: 70px;
+  background-color: darkslategray;
+  cursor: pointer;
+  /* border-radius: 20px; */
+}
+
+
+.switch::after {
+  z-index: -1;
+  content: '';
+  text-align: center;
+  position: absolute;
+  width: 70px;
+  height: 60px;
+  background-color: floralwhite;
+  top: 5px; 
+  left: 5px;
+  transition: all 0.3s;
+}
+
+.checkbox:checked + .switchWeight::after {
+  z-index: -1;
+  content: '';
+  text-align: center;
+  position: absolute;
+  width: 93%;
+  height: 85%;
+  background-color: floralwhite;
+  top: 5px; 
+  left: 5px;
+  transition: all 0.3s;
+}
+.checkbox:checked + .switch::after {
+  left : 75px; 
+}
+
+.checkbox:checked + .switch {
+  background-color: #7983ff;
+}
+
+.checkbox { 
+  display : none;
 }
