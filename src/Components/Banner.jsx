@@ -7,7 +7,7 @@ const Banner = () => {
         <img className="logoIcon" src={require("../Assets/images/pawLogo.png")} alt="pawtastic logo"/>
       </div>
         <div className="companyName">
-          Pawtastic
+          PAWTASTIC
         </div>
     </div>
   );

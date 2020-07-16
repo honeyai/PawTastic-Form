@@ -76,9 +76,7 @@ class PawForm extends Component {
       <div className="formWrapper">
         <div className="left">
           <Banner />
-          <div className="about">
-            <h4></h4>
-          </div>
+          <img className="dog" src={require("../Assets/images/dog.png")}/>
         </div>
         <div className="right">
           <div className="circle1"></div>
@@ -86,28 +84,30 @@ class PawForm extends Component {
           <div className="circle3"></div>
           <div className="circle4"></div>
           <form onSubmit={this.formSubmission} className="pawForm">
-            <span>Let's get to know your pup!</span>
-            <span>Name</span>
-            <input
-              type="text"
-              id="petname"
-              placeholder="Pet's name"
-              onChange={this.onNameInput}
-            />
-            <span>Birthday</span>
-            <input
-              type="text"
-              id="petbirthday"
-              placeholder="mm/dd/yyyy"
-              onChange={this.onDateInput}
-            />
-            <span>Breed</span>
-            <input
-              type="text"
-              id="breed"
-              placeholder="Breed"
-              onChange={this.onBreedInput}
-            />
+            <span className="formTitle">Let's get to know your pup!</span>
+            <div className="formContainer">
+              <span className="name">Name</span>
+              <input
+                type="text"
+                id="petname"
+                placeholder="Pet's name"
+                onChange={this.onNameInput}
+              />
+              <span className="bday">Birthday</span>
+              <input
+                type="text"
+                id="petbirthday"
+                placeholder="mm/dd/yyyy"
+                onChange={this.onDateInput}
+              />
+              <span className="breed">Breed</span>
+              <input
+                type="text"
+                id="breed"
+                placeholder="Breed"
+                onChange={this.onBreedInput}
+              />
+            </div>
             <div className="flex">
               <input
                 type="checkbox"
@@ -119,7 +119,6 @@ class PawForm extends Component {
                 <div className="female">Female</div>
                 <div className="male">Male</div>
               </label>
-
               <input
                 type="checkbox"
                 name="spayNeutered"

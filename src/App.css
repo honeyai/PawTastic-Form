@@ -1,23 +1,27 @@
 .banner{
-  /* border: olive solid; */
+  border: olive solid;
   display: flex;
-  align-items: center;
-  position: relative;
+  justify-items: flex-start;
+  /* flex-direction: column; */
+  /* position: relative; */
   width: 100%;
-  /* height: 10vh; */
+  height: 20vh;
 }
 
 .logoIcon{
   border: solid;
   width: auto;
-  height: 10vh;
+  height: 100%;
 }
 
 .companyName{
-  /* border: springgreen solid; */
-  display: inline-block;
-  font-size: 300%;
-  color: #8DCAF2;
+  border: springgreen solid;
+  /* display: inline-block; */
+  width: 100vw;
+  /* font-size: 100%; */
+  /* color: #8DCAF2; */
+  color: #EBD0CE;
+  font-family: 'Righteous', cursive;
 }
 
 .formWrapper{
@@ -25,13 +29,24 @@
 }
 
 .left{
-  background-color:#000430;
-  width:40vw;
+  /* background-color:#000430; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #383C52;
+  min-width:40vw;
+}
+
+.dog{
+  width:auto;
+  height: 50vh;
 }
 
 .right{
   /* border: rgb(197, 29, 248) solid; */
-  background-color:#FFA460;
+  /* background-color:#FFA460; */
+  background-color: #F7ECEB;
   width:100vw;
   height:100vh;
   display: grid;
@@ -77,12 +92,25 @@
   grid-row: 2;
 }
 
-span{
-  padding:0;
+.name{
+  margin-left: 15%;
+  align-self: flex-start;
+  /* padding:0; */
+}
+
+.bday{
+  margin-left: 10%;
+  align-self: flex-start;
+}
+
+.breed{
+  margin-left: 5%;
+  align-self: flex-start;
 }
 
 .pawForm{
   /* border: solid; */
+  font-family: 'Righteous', cursive;
   background-color: #FFFFFF;
   color: #000430;
   grid-column: 2/4;
@@ -91,10 +119,26 @@ span{
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  max-height: 40vw;
-  min-height: 40vw;
-  width: 40vw;
+  max-height: 36vw;
+  min-height: 36vw;
+  width: 36vw;
   border-radius: 55%;
+}
+
+.formTitle{
+  border: orange solid;
+  text-align: center;
+  width: 70%;
+  font-size: 150%;
+}
+
+.formContainer{
+  border: solid;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
 }
 
 .flex{
@@ -104,16 +148,16 @@ span{
 }
 
 #petname{
-  border: olive solid;
-  width: 25%;
+  /* border: olive solid; */
+  width: 70%;
 }
 
 #petbirthday{
-  width: 25%;
+  width: 80%;
 }
 
 #breed{
-  width: 25%;
+  width: 90%;
 }
 
 .spayNeut{
@@ -142,7 +186,8 @@ button{
   max-width: 100px;
   min-height: 35px;
   max-height: 35px;
-  background-color: #C3C3C3;
+  /* background-color: #C3C3C3; */
+  background-color: #EBD0CE;
   cursor: pointer;
   /* border-radius: 20px; */
 }
