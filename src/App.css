@@ -27,6 +27,42 @@
 .right{
   border: blanchedalmond solid;
   width:75vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27%, 1fr));
+  grid-column-gap: 0ch;
+  justify-items: center;
+}
+
+.circle1, .circle2, .circle3, .circle4 {
+  /* border: solid; */
+  max-height: 20vw;
+  min-height: 20vw;
+  width: 20vw;
+  border-radius: 100%;
+}
+
+.circle1 {
+  border: red solid;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.circle2 {
+  border: royalblue solid;
+  grid-column:2;
+  grid-row: 1;
+}
+
+.circle3 {
+  border: greenyellow solid;
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.circle4{
+  border: orange solid;
+  grid-column: 4;
+  grid-row: 2;
 }
 
 span{
@@ -35,6 +71,9 @@ span{
 
 .pawForm{
   border: solid;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -86,8 +125,8 @@ button{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-width: 150px;
-  max-width: 150px;
+  min-width: 100px;
+  max-width: 100px;
   min-height: 35px;
   max-height: 35px;
   background-color: darkslategray;
@@ -95,13 +134,16 @@ button{
   /* border-radius: 20px; */
 }
 
+.yes, .no, .female, .male{
+  font-size: 1vw;
+}
 
 .switch::after {
   z-index: -1;
   content: '';
   text-align: center;
   position: absolute;
-  width: 70px;
+  width: 45%;
   height: 25px;
   background-color: floralwhite;
   top: 5px; 
@@ -114,15 +156,15 @@ button{
   content: '';
   text-align: center;
   position: absolute;
-  width: 93%;
-  height: 85%;
+  width: 90%;
+  height: 82%;
   background-color: floralwhite;
   top: 3px; 
   left: 5px;
   transition: all 0.3s;
 }
 .checkbox:checked + .switch::after {
-  left : 75px; 
+  left : 51%; 
 }
 
 .checkbox:checked + .switch {

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+let toggleVal = 0;
+
 class PawForm extends Component {
   constructor(props) {
     super(props);
@@ -8,8 +10,8 @@ class PawForm extends Component {
       petBirthday: "",
       petBreed: "",
       petSex: "female",
-      spayNeutered: "",
       petWeight: "0-25",
+      spayNeutered: "",
     };
   }
 
@@ -31,17 +33,38 @@ class PawForm extends Component {
     })
   }
 
+
+  toggleSex = () => {
+    let num = 0;
+    // num === 0 ? "male":"female" 
+    if(toggleVal === 0) {
+      num = "male";
+    } else if(toggleVal === 1){
+      num = "female";
+    }
+    if(toggleVal === 0){
+      toggleVal = 1;
+    } else if(toggleVal === 1){
+      toggleVal = 0;
+    }
+    return num
+  }
+
   onSexInput = event => {
+   console.log(event.target.value)
+    let petString = this.toggleSex()
     event.target.value === "on" ?
       this.setState({
-        petSex: "male"
-      }) : event.target.value !== "on" ?
-        this.setState({
-          petSex: "female"
-        }) : this.setState({
-          petSex: "male"
-        })
-  }
+        petSex: petString
+      })
+      :this.setState({
+        petSex: "female"
+      })
+    }
+    // }) : event.target.value === "off" ?
+    //    : this.setState({
+    //     petSex: ""
+    //   })
 
   onWeightChange = eventChange => {
     this.setState({
@@ -56,10 +79,17 @@ class PawForm extends Component {
     return (
       <div className="formWrapper">
         <div className="left">
-          AHHHHHHHHHHHH
+          <div className="about">
+            <h4></h4>
+          </div>
         </div>
         <div className="right">
+          <div className="circle1"></div>
+          <div className="circle2"></div>
+          <div className="circle3"></div>
+          <div className="circle4"></div>
             <form onSubmit={this.formSubmission} className="pawForm">
+              <span>Let's get to know your pup!</span>
               <span>Name</span>
               <input
                 type="text"
