@@ -1,24 +1,24 @@
 .banner{
-  border: olive solid;
+  /* border: olive solid; */
   display: flex;
-  justify-items: flex-start;
-  /* flex-direction: column; */
-  /* position: relative; */
+  padding: 5%;
   width: 100%;
   height: 20vh;
 }
 
 .logoIcon{
-  border: solid;
-  width: auto;
-  height: 100%;
+  /* border: solid; */
+  width: 100%;
+  height: auto;
 }
 
 .companyName{
-  border: springgreen solid;
+  /* border: springgreen solid; */
   /* display: inline-block; */
-  width: 100vw;
-  /* font-size: 100%; */
+  width: 100%;
+  text-align: center;
+  align-self: center;
+  font-size: 4.5em;
   /* color: #8DCAF2; */
   color: #EBD0CE;
   font-family: 'Righteous', cursive;
@@ -126,14 +126,14 @@
 }
 
 .formTitle{
-  border: orange solid;
+  /* border: orange solid; */
   text-align: center;
   width: 70%;
   font-size: 150%;
 }
 
 .formContainer{
-  border: solid;
+  /* border: solid; */
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -142,8 +142,11 @@
 }
 
 .flex{
+  /* border: solid; */
   display: flex;
-  justify-items: space-evenly;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
   /* height: 1vh; */
 }
 
@@ -174,6 +177,7 @@ button{
 
 .weightGroup{
   display: flex;
+  justify-content: center;
 }
 
 .switch, .switchWeight{
@@ -182,14 +186,18 @@ button{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-width: 100px;
-  max-width: 100px;
-  min-height: 35px;
-  max-height: 35px;
+  min-width: 40%;
+  max-width: 40%;
+  min-height: 100%;
+  max-height: 100%;
   /* background-color: #C3C3C3; */
   background-color: #EBD0CE;
   cursor: pointer;
-  /* border-radius: 20px; */
+}
+
+.switchWeight{
+  min-width: 30%;
+  max-width: 30%;
 }
 
 .yes, .no, .female, .male{
@@ -202,10 +210,10 @@ button{
   text-align: center;
   position: absolute;
   width: 45%;
-  height: 25px;
+  height: 82%;
   background-color: floralwhite;
-  top: 5px; 
-  left: 5px;
+  top: 10%; 
+  left: 2%;
   transition: all 0.3s;
 }
 
