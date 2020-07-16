@@ -1,19 +1,23 @@
 .banner{
-  border: olive solid;
-  grid-area: "banner";
+  /* border: olive solid; */
   display: flex;
+  align-items: center;
   position: relative;
-  width: 100vw;
-  height: 10vh;
+  width: 100%;
+  /* height: 10vh; */
 }
+
 .logoIcon{
   border: solid;
   width: auto;
-  height: 50%;
+  height: 10vh;
 }
+
 .companyName{
-  border: springgreen solid;
+  /* border: springgreen solid; */
   display: inline-block;
+  font-size: 300%;
+  color: #8DCAF2;
 }
 
 .formWrapper{
@@ -21,46 +25,54 @@
 }
 
 .left{
-  width:25vw;
+  background-color:#000430;
+  width:40vw;
 }
 
 .right{
-  border: blanchedalmond solid;
-  width:75vw;
+  /* border: rgb(197, 29, 248) solid; */
+  background-color:#FFA460;
+  width:100vw;
+  height:100vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(27%, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(1%, 1fr));
+  grid-template-rows: fit-content(2%);
   grid-column-gap: 0ch;
   justify-items: center;
+  align-content: center;
+  margin: 0px;
+  padding: 0px;
 }
 
 .circle1, .circle2, .circle3, .circle4 {
   /* border: solid; */
-  max-height: 20vw;
-  min-height: 20vw;
-  width: 20vw;
+  max-height: 13vw;
+  min-height: 13vw;
+  width: 13vw;
   border-radius: 100%;
+  background-color: #FFFFFF;
 }
 
 .circle1 {
-  border: red solid;
+  /* border: red solid; */
   grid-column: 1;
   grid-row: 2;
 }
 
 .circle2 {
-  border: royalblue solid;
+  /* border: royalblue solid; */
   grid-column:2;
   grid-row: 1;
 }
 
 .circle3 {
-  border: greenyellow solid;
+  /* border: greenyellow solid; */
   grid-column: 3;
   grid-row: 1;
 }
 
 .circle4{
-  border: orange solid;
+  /* border: orange solid; */
   grid-column: 4;
   grid-row: 2;
 }
@@ -70,17 +82,18 @@ span{
 }
 
 .pawForm{
-  border: solid;
-  grid-column-start: 2;
-  grid-column-end: 3;
+  /* border: solid; */
+  background-color: #FFFFFF;
+  color: #000430;
+  grid-column: 2/4;
   grid-row: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  max-height: 50vw;
-  min-height: 50vw;
-  width: 50vw;
+  max-height: 40vw;
+  min-height: 40vw;
+  width: 40vw;
   border-radius: 55%;
 }
 
@@ -129,7 +142,7 @@ button{
   max-width: 100px;
   min-height: 35px;
   max-height: 35px;
-  background-color: darkslategray;
+  background-color: #C3C3C3;
   cursor: pointer;
   /* border-radius: 20px; */
 }
